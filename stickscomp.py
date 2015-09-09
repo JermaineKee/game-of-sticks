@@ -1,6 +1,17 @@
+import random
 
+while True:
+    game_type = input("Play a Human (h) or computer (cpu)?")
+    if game_type == "cpu" or game_type == "h":
+        break
+    else:
+        print("Please enter 'cpu' or 'h' in order to play")
+
+if game_type == "cpu":
+    cpu = random.randint(1, 3)
 # set player to 1
 player = 1
+cpu = 1
 
 # set the initial state
 state = 20 #number of sticks
@@ -27,8 +38,14 @@ while True:
     #switch players 2->1, 1->2
     if player == 1:
         player = 2
+
     else:
         player = 1
+
+    if cpu == 1:
+        player = 1
+    else:
+        cpu = 1
 
 
 
